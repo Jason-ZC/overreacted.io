@@ -16,7 +16,6 @@ class BlogIndexTemplate extends React.Component {
     const langKey = this.props.pageContext.langKey;
 
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO />
@@ -38,37 +37,40 @@ class BlogIndexTemplate extends React.Component {
             </Panel>
           )}
 
-          {posts.map(({ node }) => {
-            const title = get(node, 'frontmatter.title') || node.fields.slug;
-            return (
-              <article key={node.fields.slug}>
-                <header>
-                  <h3
-                    style={{
-                      fontFamily: 'Montserrat, sans-serif',
-                      fontSize: rhythm(1),
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link
-                      style={{ boxShadow: 'none' }}
-                      to={node.fields.slug}
-                      rel="bookmark"
+          {posts &&
+            posts.map(({ node }) => {
+              const title = get(node, 'frontmatter.title') || node.fields.slug;
+              return (
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
+                      style={{
+                        fontFamily: 'Montserrat, sans-serif',
+                        fontSize: rhythm(1),
+                        marginBottom: rhythm(1 / 4),
+                      }}
                     >
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>
-                    {formatPostDate(node.frontmatter.date, 'en')}
-                    {` • ${formatReadingTime(node.timeToRead)}`}
-                  </small>
-                </header>
-                <p
-                  dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
-                />
-              </article>
-            );
-          })}
+                      <Link
+                        style={{ boxShadow: 'none' }}
+                        to={node.fields.slug}
+                        rel="bookmark"
+                      >
+                        {title}
+                      </Link>
+                    </h3>
+                    <small>
+                      {formatPostDate(node.frontmatter.date, 'en')}
+                      {` • ${formatReadingTime(node.timeToRead)}`}
+                    </small>
+                  </header>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.spoiler,
+                    }}
+                  />
+                </article>
+              );
+            })}
         </main>
         <Footer />
       </Layout>

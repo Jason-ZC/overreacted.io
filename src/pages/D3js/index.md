@@ -1,7 +1,7 @@
 ---
 title: 'D3.js从入门到懵逼'
 date: '2018-08-15'
-spoiler: 数据可视化之D3js入门
+spoiler: 数据可视化的利器
 ---
 
 ![1537167339629](/Users/jason/Desktop/pic/D3/1537167339629.jpg)
