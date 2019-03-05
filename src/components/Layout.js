@@ -57,11 +57,11 @@ class Layout extends React.Component {
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: 'rgb(255, 167, 196)',
             }}
             to={'/'}
           >
-            {title}
+            <span style={{ color: '#47B8CC' }}>摸鱼</span>
+            <span style={{ color: '#FF6128' }}>樂</span>
           </Link>
         </h3>
       );
