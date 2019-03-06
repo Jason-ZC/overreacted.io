@@ -244,6 +244,6 @@ function Todos() {
 
 **React Hooks 要解决的问题是状态共享**，是继 [render-props](http://link.zhihu.com/?target=https%3A//reactjs.org/docs/render-props.html) 和 [higher-order components](http://link.zhihu.com/?target=https%3A//reactjs.org/docs/higher-order-components.html) 之后的第三种状态共享方案，不会产生 JSX 嵌套地狱问题。其中各种奥妙带我继续学习后，慢慢品味。
 
-![真香](../真香.gif)
+![真香](./真香.gif)
 
  
