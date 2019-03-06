@@ -1,7 +1,7 @@
 ---
 title: 'Hooks惊鸿一瞥'
 date: '2019-01-03'
-soplier: React Hooks从入门到懵逼
+spoiler: React Hooks从入门到懵逼
 ---
 
 > Hooks是React 16.8中新增的内容，它可以让你在class之外使用state和其他React特性。下面是我根据React官方文档和Dan大佬博客的一些总结，算是一个简单的入门。
