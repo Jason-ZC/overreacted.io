@@ -25,7 +25,6 @@ const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
-    console.log(post);
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     let { previous, next, slug } = this.props.pageContext;
     const lang = post.fields.langKey;
